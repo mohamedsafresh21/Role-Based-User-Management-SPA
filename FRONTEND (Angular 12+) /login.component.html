@@ -1,0 +1,13 @@
+<form (ngSubmit)="login()">
+  <input [(ngModel)]="userId" name="userId" placeholder="User ID" required>
+  <input [(ngModel)]="password" name="password" type="password" placeholder="Password">
+  
+  <select [(ngModel)]="role" name="role">
+    <option value="GENERAL_USER">General User</option>
+    <option value="ADMIN">Admin</option>
+  </select>
+
+  <button type="submit">Login</button>
+</form>
+
+<div *ngIf="loading">Loading...</div>
